@@ -43,7 +43,9 @@ namespace MeuCadastroProdutos
                         Produto produtoBuscado = sistema.BuscarProdutoPorId(idBusca);
                         if (produtoBuscado != null)
                         {
-                            Console.WriteLine($"Produto encontrado - Nome: {produtoBuscado.Nome} - Preço: {produtoBuscado.Preco}");
+                            Console.WriteLine(
+                                $"Produto encontrado - Nome: {produtoBuscado.Nome} - Preço: {produtoBuscado.Preco}"
+                            );
                         }
                         else
                         {
@@ -55,7 +57,9 @@ namespace MeuCadastroProdutos
                         var produtos = sistema.ListarProdutos();
                         foreach (var produto in produtos)
                         {
-                            Console.WriteLine($"ID: {produto.Id} - Nome: {produto.Nome} - Preço: {produto.Preco}");
+                            Console.WriteLine(
+                                $"ID: {produto.Id} - Nome: {produto.Nome} - Preço: {produto.Preco}"
+                            );
                         }
                         break;
                     case 4:
@@ -100,16 +104,19 @@ namespace MeuCadastroProdutos
                         Console.WriteLine("Opção inválida.");
                         break;
                 }
+
+                if (opcao != 6)
+                {
+                    Console.WriteLine("Deseja escolher outra opção? s/n");
+
+                    string resposta = Console.ReadLine();
+
+                    if (resposta.ToLower() == "n")
+                    {
+                        continuar = false;
+                    }
+                }
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-     

@@ -44,8 +44,7 @@ namespace MeuCadastroProdutos
                         if (produtoBuscado != null)
                         {
                             Console.WriteLine(
-                                $"Produto encontrado - Nome: {produtoBuscado.Nome} - Preço: {produtoBuscado.Preco}"
-                            );
+                                $"Produto encontrado - Nome: {produtoBuscado.Nome} - Preço: {produtoBuscado.Preco}");
                         }
                         else
                         {
